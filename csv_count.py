@@ -2,42 +2,46 @@
 from collections import Counter
 import reprlib
 
-# Customize the limits for reprlib
-r = reprlib.Repr()
-r.maxstring = 40
-r.maxlist = 10
-
-# Global variables
-parsed = []
-list_items = []
-
-
-def prep_file(a_file):
-    """Read and split the csv on newline and comma and add to a list."""
+def parse_csv(a_file):
+    """Pass in a csv file to be read and split on newline and comma
+    then added to a list."""
+    parsed = []
     f = open(a_file, 'r').read()
     rows = f.split('\n')
     for i in rows:
         new = i.split(',')
         parsed.append(new)
+    return parsed
 
 
 def pull_items(a_list, n):
-    """Put items from specified column into a list."""
+    """Pass in a list and column number.
+    Returns new list with items from specified column."""
+    new_list = []
     for i in a_list:
-        list_items.append(i[n])
+        if i[n] != '':
+            new_list.append(i[n])
+        else:
+            x = n - 1
+            new_list.append('Column was blank.')
+    return new_list
 
 
-def print_items(x):
-    """Count items and print a formatted list."""
-    print_list = []
-    foo = Counter(x)
+def count_items(a_list, n=1000):
+    """Counts items in list and returns a list formatted for print()."""
+    print_list = ['Total: Reason']
+    foo = Counter(a_list)
+    # n can be passed to limit the amount of items returned in the list.
+    # For example pass 10 to see only the top 10 items.
+    for value, count in foo.most_common(n):
+        print_list.append("%s: %r" % (count, value))
+    return print_list
+
+
+def count_to_dict(a_list):
+    """Count items in list and return dict with number of each occurance as key."""
+    new_dict = {}
+    foo = Counter(a_list)
     for value, count in foo.most_common():
-        print_list.append("%s occured %r times." % (r.repr(value), count))
-    print("\n".join(print_list))
-
-
-data_file = input("Please enter a file. > ")
-data_column = int(input("Column to be counted? e.g.[1,2,3...] > ")) - 1
-prep_file(data_file)
-pull_items(parsed, data_column)
-print_items(list_items)
+        new_dict[count] = value
+    return new_dict
