@@ -1,5 +1,5 @@
 # Example Files  
-All example files begin with ex.  
+All example files begin with 'ex'.  
 For example *ex_occurrence.py*
 
 [README.md](../README.md) contains overview documentation.  
