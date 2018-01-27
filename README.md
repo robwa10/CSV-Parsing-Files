@@ -1,21 +1,21 @@
 # Parse-and-Analyze
 A collection of modules and example files used for parsing files and analyzing data.  
 
-README.md contains overview documentation.  
+__README.md__ contains overview documentation.  
 [MODULES.md](/docs/MODULES.md) contains documentation for all modules.  
 [EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
 ## Table of Contents  
-[Requirements](Requirements)  
-[Structure, Usage, Installation](Structure, Usage, Installation)  
+[Requirements](https://github.com/robwa10/Parse-and-Analyze#requirements)  
+[Structure, Usage, Installation](https://github.com/robwa10/Parse-and-Analyze#structure-usage-installation)  
  * Structure  
- * Usage
-  - As Modules
-  - Example Files
+ * Usage  
+   * As Modules
+   * Example Files
  * Install and cd  
 
-[Pull Requests and Maintenance](Pull Requests and Maintenance)  
-[Copyright](Copyright)
+[Pull Requests and Maintenance](https://github.com/robwa10/Parse-and-Analyze#pull-requests-and-maintenance)  
+[Copyright](https://github.com/robwa10/Parse-and-Analyze#copyright)  
 
 ## Requirements  
 All files are written for Python v3 or higher. Instructions for downloading Python 3 can be found [here](https://www.python.org/downloads/).

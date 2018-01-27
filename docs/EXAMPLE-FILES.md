@@ -4,15 +4,15 @@ For example *ex_occurrence.py*
 
 [README.md](../README.md) contains overview documentation.  
 [MODULES.md](/docs/MODULES.md) contains documentation for all modules.  
-EXAMPLE-FILES.md contains documentation for files demonstrating module functionality.
+__EXAMPLE-FILES.md__ contains documentation for files demonstrating module functionality.
 
 ### ex_occurrence.py  
-##### File input types  
+#### File input types  
 CSV  
-##### Functionality  
+#### Functionality  
 Reads and parses CSV.  
 Counts the occurrences of all data in a specified column.
-##### Output  
+#### Output  
 Prints the results in the terminal.
 
 #### Modules Used  

@@ -1,7 +1,7 @@
 # Functions  
 
 [README.md](../README.md) contains overview documentation.  
-MODULES.md contains documentation for all modules.  
+__MODULES.md__ contains documentation for all modules.  
 [EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
 ## *Parsing*
@@ -24,6 +24,7 @@ parsed_data = parse_csv('data.csv')
 print(parsed_data)
 // [[John, Smith, jsmith@email.com], [Jane, Doe, jane@email.com]]
 ```  
+___  
 
 ### `pull(a_list, n)`  
 Pass in data from `parsed_csv()` and a column index. Creates a list with data from index. Catches empty columns.
