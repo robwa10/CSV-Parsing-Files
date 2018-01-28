@@ -22,9 +22,10 @@ __MODULES.md__ contains documentation for all modules.
 Counts the instances of each item in a list using `Counter`.  
 
 #### Arguments  
-- a_list *(list)*: The list to count.
-- n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.
-- x=False [optional] *(boolean)*: Boolean to return list (default) or dictionary.
+- a_list *(list)*: The list to count.  
+- x=False [optional] *(boolean)*: Boolean to return list (default) or dictionary. Must be passed if an int is passed as third param.  
+- n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.  
+
 
 #### Returns  
 - *(List)* [default]: Returns a list. Each item in the list is `[occurrence total: 'value']`.
@@ -35,7 +36,7 @@ Counts the instances of each item in a list using `Counter`.
 data = [a, v, a, f, d, b, d, f, d, b, d, a, f, a, a]
 results = items(data)
 limit_results = items(data, 3)
-limit_results = items(data, 3, True)
+limit_results = items(data, True, 3)
 
 print(results)
 print(limit_results)
