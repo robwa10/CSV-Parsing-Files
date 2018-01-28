@@ -5,14 +5,46 @@ __MODULES.md__ contains documentation for all modules.
 [EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
 ## Table of Contents  
+[Counting](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#counting)  
+* [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
+
 [Parsing](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parsing)  
 * [parse_csv](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parse_csva_file-sn-d)  
 * [pull](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#pulla_list-n)
 
-[Counting](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#counting)  
-* [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
+[Validation](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validation)  
+* [validate_choice](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validate_choicechoices[])
 
-## *Parsing*
+
+## Counting  
+
+### `items(a_list, n=1000)`  
+Counts the instances of each item in a list using `Counter`.  
+
+#### Arguments  
+- a_list *(list)*: The list to count.
+- n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.
+- x=False [optional] *(boolean)*: Boolean to return list (default) or dictionary.
+
+#### Returns  
+- *(List)* [default]: Returns a list. Each item in the list is `[occurrence total: 'value']`.
+- *(Dictionary)* [optional]: Returns a dictionary. Key, value pairs are `{occurrence total: 'value'}`.
+
+#### Example  
+```
+data = [a, v, a, f, d, b, d, f, d, b, d, a, f, a, a]
+results = items(data)
+limit_results = items(data, 3)
+limit_results = items(data, 3, True)
+
+print(results)
+print(limit_results)
+// ["5: 'a'","4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
+// ["5: 'a'","4: 'd'", "3: 'f'"]
+// {5: 'a', 4: 'd', 3: 'f'}
+```
+
+## Parsing
 
 ### `parse_csv(a_file, s='\n', d=',')`  
 Creates a list from data within each row of a CSV file and appends that list to a list.
@@ -52,31 +84,27 @@ email = pull(parsed_data, 2)
 print(email)
 // [jsmith@email.com, jane@email.com]
 ```
+## Validation
 
-## *Counting*  
+### `validate_choice(choices=[])`  
+Presents the user with a selection of choices and validates their input. Defaults to Yes or No selection if called with no argument.
 
-### `items(a_list, n=1000)`  
-Counts the instances of each item in a list using `Counter`.  
+#### Arguments
+- choices [optional] *(list)*: List of choices for user to select from. Defaults to Yes/No if called with no param.
 
-#### Arguments  
-- a_list *(list)*: The list to count.
-- n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.
-- x=False [optional] *(boolean)*: Boolean to return list (default) or dictionary.
+#### Returns
+- *(string)*: Returns validated input as a lowercase string.  
 
-#### Returns  
-- *(List)* [default]: Returns a list. Each item in the list is `[occurrence total: 'value']`.
-- *(Dictionary)* [optional]: Returns a dictionary. Key, value pairs are `{occurrence total: 'value'}`.
-
-#### Example  
+#### Example
 ```
-data = [a, v, a, f, d, b, d, f, d, b, d, a, f, a, a]
-results = items(data)
-limit_results = items(data, 3)
-limit_results = items(data, 3, True)
+my_choices = ['Bob', 'Susie', '3', '4']
+print(validate_choice(my_choices))
 
-print(results)
-print(limit_results)
-// ["5: 'a'","4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
-// ["5: 'a'","4: 'd'", "3: 'f'"]
-// {5: 'a', 4: 'd', 3: 'f'}
-```
+// Please choose one.
+// Bob
+// Susie
+// 3
+// 4
+// > Bob
+// bob
+```  
