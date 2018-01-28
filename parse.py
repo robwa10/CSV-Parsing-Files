@@ -17,9 +17,9 @@ from collections import Counter
 
 
 # Counting---------------------------------------------------------------------
-def items(a_list, n=1000, x=False):
+def items(a_list, dict=False, n=1000):
     foo = Counter(a_list)
-    if x is False:
+    if dict is False:
         new_list = []
         for value, count in foo.most_common(n):
             new_list.append("%s: %r" % (count, value))
@@ -42,13 +42,12 @@ def parse_csv(a_file, s='\n', d=','):
     return parsed
 
 
-def pull(a_list, n):
+def pull(a_list, column):
     new_list = []
     for i in a_list:
         if i[n] != '':
             new_list.append(i[n])
         else:
-            x = n - 1
             new_list.append('Column was blank.')
     return new_list
 
