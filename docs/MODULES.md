@@ -67,12 +67,12 @@ print(parsed_data)
 ```  
 ___  
 
-### `pull(a_list, n)`  
+### `pull(a_list, column)`  
 Pass in data from `parsed_csv()` and a column index. Creates a list with data from index. Catches empty columns.
 
 #### Arguments  
 - a_list *(list)*: A list of lists.
-- n *(int)*: index of a column in CSV.
+- column *(int)*: index of a column in CSV.
 
 #### Returns  
 - *(List)*: Returns a list.  
