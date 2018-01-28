@@ -4,6 +4,14 @@
 __MODULES.md__ contains documentation for all modules.  
 [EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
+## Table of Contents  
+[Parsing](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parsing)  
+* [parse_csv](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parse_csva_file-sn-d)  
+* [pull](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#pulla_list-n)
+
+[Counting](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#counting)  
+* [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
+
 ## *Parsing*
 
 ### `parse_csv(a_file, s='\n', d=',')`  
@@ -31,7 +39,7 @@ Pass in data from `parsed_csv()` and a column index. Creates a list with data fr
 
 #### Arguments  
 - a_list *(list)*: A list of lists.
-- n *(int)*: index of column in CSV.
+- n *(int)*: index of a column in CSV.
 
 #### Returns  
 - *(List)*: Returns a list.  
@@ -53,7 +61,7 @@ Counts the instances of each item in a list using `Counter`.
 #### Arguments  
 - a_list *(list)*: The list to count.
 - n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.
-- x=False [optional] *(boolean)*: Boolean to return list or dictionary. List is default.
+- x=False [optional] *(boolean)*: Boolean to return list (default) or dictionary.
 
 #### Returns  
 - *(List)* [default]: Returns a list. Each item in the list is `[occurrence total: 'value']`.
