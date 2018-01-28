@@ -13,7 +13,7 @@ __MODULES.md__ contains documentation for all modules.
 * [pull](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#pulla_list-n)
 
 [Validation](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validation)  
-* [validate_choice](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validate_choicechoices[])
+* [validate_choice](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validate_choicechoices)
 
 
 ## Counting  
