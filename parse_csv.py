@@ -23,7 +23,7 @@ def parse_csv(a_file, s='\n', d=','):
     f = open(a_file, 'r').read()
     # Split the CSV rows.
     rows = f.split(s)
-    # Iterate over rows and add individual data to list as a list.
+    # Iterate over rows and add individual data to parsed as a list.
     for i in rows:
         new = i.split(d)
         parsed.append(new)
