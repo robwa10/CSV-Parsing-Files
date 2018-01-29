@@ -33,7 +33,7 @@ def validate_choice(choices=[]):
     # Check if called with no params for default Yes/No.
     if len(choices) == 0:
         choices = ['Yes', 'No']
-    # Lowercase all list items to validate against user input later.
+    # Lowercase all list items to validate against user input.
     lowercase_list = []
     for i in choices:
         lowercase_list.append(i.lower())

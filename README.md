@@ -22,15 +22,16 @@ All files are written for Python v3 or higher. Instructions for downloading Pyth
 
 ## Structure, Usage, Installation  
 #### Structure  
-Each function is contained in a file of the same name. The file `parse.py` imports all functions.
+Each module is contained in a file of the same name. Individual module files contain extensive code comments. The file `parse.py` contains all functions with no code comments.
 
 #### Usage
 __As Modules__  
-  - Access all modules by importing `parse.py`. For example `import parse as p`.  
+  - Access all modules by importing *parse.py*. For example `import parse as p`.  
   - Access individual modules by importing them directly. For example `import parse_csv`.
 
 __Example Files__  
-Several example files are contained in this repository which can be used as is or expanded upon to increase functionality.
+Several example files are contained in this repository which can be used as is or expanded upon to increase functionality.  
+Examples files begin with the prefix 'ex'. For example *ex_occurrence.py*.
 
 #### Install and cd  
 `git clone https://github.com/robwa10/Parse-and-Analyze.git`  
