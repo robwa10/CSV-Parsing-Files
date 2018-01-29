@@ -15,7 +15,8 @@
     Key, value pairs are `{occurrence total: 'value'}`.
 
   @example
-  data = [a, v, a, f, d, b, d, f, d, b, d, a, f, a, a]
+  data = ['a', 'v', 'a', 'f', 'd', 'b', 'd', 'f',
+   'd', 'b', 'd', 'a', 'f', 'a', 'a']
   results = items(data)
   limit_results = items(data, 3)
   dict_limit_results = items(data, True, 3)
@@ -23,8 +24,8 @@
   print(results)
   print(limit_results)
   print(dict_limit_results)
-  // ["5: 'a'","4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
-  // ["5: 'a'","4: 'd'", "3: 'f'"]
+  // ["5: 'a'", "4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
+  // ["5: 'a'", "4: 'd'", "3: 'f'"]
   // {5: 'a', 4: 'd', 3: 'f'}
 """
 
@@ -33,19 +34,33 @@
 from collections import Counter
 
 
-def items(a_list, dict=False, results=1000):
+def items(a_list, *args):
+    return_dict = False
+    results = 1000
     # Count occurenences in the list.
     foo = Counter(a_list)
-    # Check if default list should be returned.
-    if dict is False:
-        new_list = []
-        for value, count in foo.most_common(results):
-            new_list.append("%s: %r" % (count, value))
-        return new_list
+    # Check for optional params.
+    if len(args) != 0:
+        # If more than 2 params entered return error message.
+        if len(args) > 2:
+            return print('Error: You entered too many params in items().')
+        else:
+            # Check param type and change appropriate function variable.
+            for i in args:
+                if type(i) == int:
+                    results = i
+                elif type(i) == bool:
+                    return_dict = True
     # Return dictionary instead of list.
-    else:
+    if return_dict is True:
         new_dict = {}
         for value, count in foo.most_common(results):
             # Make total count the key, which is the reverse of Counter.
             new_dict[count] = value
         return new_dict
+    # Check if default list should be returned.
+    else:
+        new_list = []
+        for value, count in foo.most_common(results):
+            new_list.append("%s: %r" % (count, value))
+        return new_list
