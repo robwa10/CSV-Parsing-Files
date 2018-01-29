@@ -20,28 +20,21 @@ from collections import Counter
 def items(a_list, *args):
     return_dict = False
     results = 1000
-    # Count occurenences in the list.
     foo = Counter(a_list)
-    # Check for optional params.
     if len(args) != 0:
-        # If more than 2 params entered return error message.
         if len(args) > 2:
             return print('Error: You entered too many params in items().')
         else:
-            # Check param type and change appropriate function variable.
             for i in args:
                 if type(i) == int:
                     results = i
                 elif type(i) == bool:
                     return_dict = True
-    # Return dictionary instead of list.
     if return_dict is True:
         new_dict = {}
         for value, count in foo.most_common(results):
-            # Make total count the key, which is the reverse of Counter.
             new_dict[count] = value
         return new_dict
-    # Check if default list should be returned.
     else:
         new_list = []
         for value, count in foo.most_common(results):
