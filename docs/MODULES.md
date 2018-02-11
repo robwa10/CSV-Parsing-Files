@@ -2,7 +2,7 @@
 
 [README.md](../README.md) contains overview documentation.  
 __MODULES.md__ contains documentation for all modules.  
-[EXAMPLE-FILES.md](/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
+[EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
 ## Table of Contents  
 [Counting](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#counting)  
