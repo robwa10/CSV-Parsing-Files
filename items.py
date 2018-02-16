@@ -22,14 +22,11 @@ Returns:
 Example:
     >>> data = ['a', 'v', 'a', 'f', 'd', 'b', 'd', 'f',
         'd', 'b', 'd', 'a', 'f', 'a', 'a']
-    >>> results = items(data)
-    >>> limit_results = items(data, 3)
-    >>> dict_limit_results = items(data, True, 3)
-    >>> print(results)
+    >>> print(items(data))
     ["5: 'a'", "4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
-    >>> print(limit_results)
+    >>> print(items(data, 3))
     ["5: 'a'", "4: 'd'", "3: 'f'"]
-    >>> print(dict_limit_results)
+    >>> print(items(data, True, 3))
     {5: 'a', 4: 'd', 3: 'f'}
 """
 
