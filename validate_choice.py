@@ -1,24 +1,30 @@
 """
-  Presents the user with a selection of choices and validates their input.
-  Defaults to Yes or No selection if called with no argument.
+Presents the user with a selection of choices and validates their input.
+Defaults to Yes or No selection if called with no argument.
 
-  @since 1.0.0
-  @category: Validation
-  @param (list) [optional] choices: List of choices for user to select from.
-    Defaults to Yes/No if called with no param.
-  @returns (string): Returns validated input as a lowercase string.
+Since:
+    1.0.0
 
-  @example
-  my_choices = ['Bob', 'Susie', '3', '4']
-  print(validate_choice(my_choices))
+Category:
+    Validation
 
-  // Please choose one.
-  // Bob
-  // Susie
-  // 3
-  // 4
-  // > Bob
-  // bob
+Args:
+    param (list) [optional] choices: List of choices for user to select from.
+        Defaults to Yes/No if called with no param.
+
+Returns:
+    string: Returns validated input as a lowercase string.
+
+Example:
+>>> my_choices = ['Bob', 'Susie', '3', '4']
+>>> print(validate_choice(my_choices))
+Please choose one.
+Bob
+Susie
+3
+4
+>>> Bob
+bob
 """
 
 

@@ -1,32 +1,36 @@
 """
-  Counts the instances of each item in a list using `Counter`.
+Counts the instances of each item in a list using `Counter`.
 
-  @since 1.0.0
-  @category: Parsing
-  @param (list) a_list: The list to count.
-  @param (boolean) [optional] dict=False: Boolean to return
-      list (default) or dictionary. Must be passed if an int is passed as
-      third param.
-  @param (int) [optional] n=1000: Integer to limit data returned.
-      Default is 1000.
-  @returns (list) [default]: Returns a list.
-    Each item in the list is `[occurrence total: 'value']`.
-    (Dictionary) [optional]: Returns a dictionary.
-    Key, value pairs are `{occurrence total: 'value'}`.
+Since:
+    1.0.0
 
-  @example
-  data = ['a', 'v', 'a', 'f', 'd', 'b', 'd', 'f',
-   'd', 'b', 'd', 'a', 'f', 'a', 'a']
-  results = items(data)
-  limit_results = items(data, 3)
-  dict_limit_results = items(data, True, 3)
+Category:
+    Parsing
 
-  print(results)
-  print(limit_results)
-  print(dict_limit_results)
-  // ["5: 'a'", "4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
-  // ["5: 'a'", "4: 'd'", "3: 'f'"]
-  // {5: 'a', 4: 'd', 3: 'f'}
+Args:
+    param1 (list) a_list: The list to count.
+    param2 (boolean) [optional] dict=False: Boolean to return
+        list (default) or dictionary. Must be passed if an int is passed as
+        third param.
+    param3 (int) [optional] n=1000: Integer to limit data returned.
+        Default is 1000.
+
+Returns:
+    list: Each item in the list is `[occurrence total: 'value']`.
+    dictionary: [optional]: Key, value pairs are `{occurrence total: 'value'}`.
+
+Example:
+    >>> data = ['a', 'v', 'a', 'f', 'd', 'b', 'd', 'f',
+        'd', 'b', 'd', 'a', 'f', 'a', 'a']
+    >>> results = items(data)
+    >>> limit_results = items(data, 3)
+    >>> dict_limit_results = items(data, True, 3)
+    >>> print(results)
+    ["5: 'a'", "4: 'd'", "3: 'f'", "2: 'b'",  "1: 'v'"]
+    >>> print(limit_results)
+    ["5: 'a'", "4: 'd'", "3: 'f'"]
+    >>> print(dict_limit_results)
+    {5: 'a', 4: 'd', 3: 'f'}
 """
 
 

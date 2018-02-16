@@ -1,19 +1,25 @@
 """
-  Creates a list from data within each row of a CSV file
-  and appends that list to a list.
+Creates a list from data within each row of a CSV file and appends
+that list to a list.
 
-  @since 1.0.0
-  @category: Parsing
-  @param (file) a_file - The CSV to be parsed.
-  @param (string) [optional] s: The character that splits rows.
-  @param (string) [optional] d: The character that splits data within each row.
-  @returns (list of lists): Returns a list of lists.
+Since:
+    1.0.0
 
-  @example
-  parsed_data = parse_csv('data.csv')
+Category:
+    Parsing
 
-  print(parsed_data)
-  // [[John, Smith, jsmith@email.com], [Jane, Doe, jane@email.com]]
+Args:
+    param1 (file) a_file: The CSV to be parsed.
+    param2 (string) [optional] s: The character that splits rows.
+    param3 (string) [optional] d: The character that splits data within each row.
+
+Returns:
+    list of lists: Returns a list of lists.
+
+Example:
+  >>> parsed_data = parse_csv('data.csv')
+  >>> print(parsed_data)
+  [[John, Smith, jsmith@email.com], [Jane, Doe, jane@email.com]]
 """
 
 

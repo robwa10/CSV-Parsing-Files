@@ -1,20 +1,26 @@
 """
-  Pass in data from `parsed_csv()` and a column index.
-  Creates a list with data from index.
-  Catches empty columns.
+Pass in data from `parsed_csv()` and a column index.
+Creates a list with data from index.
+Catches empty columns.
 
-  @since 1.0.0
-  @category: Parsing
-  @param (list) a_list: A list of lists.
-  @param (int) column: index of a column in CSV.
-  @returns (list of lists): Returns a list.
+Since:
+    1.0.0
 
-  @example
-  parsed_data = parse_csv('data.csv')
-  email = pull(parsed_data, 2)
+Category:
+    Parsing
 
-  print(email)
-  // [jsmith@email.com, jane@email.com]
+Args:
+    param1 (list) a_list: A list of lists.
+    param2 (int) column: index of a column in CSV.
+
+Returns:
+    list of lists: Returns a list.
+
+Example:
+    >>> parsed_data = parse_csv('data.csv')
+    >>> email = pull(parsed_data, 2)
+    >>> print(email)
+    [jsmith@email.com, jane@email.com]
 """
 
 
