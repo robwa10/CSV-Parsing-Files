@@ -17,7 +17,7 @@ Returns:
     Integer: Does not round or format the returned value.
 
 Example:
-    >>>print(compound_interest(10, 3, 5))
+    >>> print(compound_interest(10, 3, 5))
     11.592740743000002
 """
 
