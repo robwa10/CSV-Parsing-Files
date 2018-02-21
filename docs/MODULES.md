@@ -6,7 +6,7 @@ __MODULES.md__ contains documentation for all modules.
 
 ## Table of Contents  
 [Maths](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#maths)  
-* [compound_interest](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#compound_interest-investment-rate-time)
+* [compound_interest](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#compound_interestinvestment-rate-time)
 * [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
 
 [Parsing](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parsing)  
