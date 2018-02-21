@@ -8,7 +8,7 @@ Category:
     Parsing
 
 Args:
-    param1 (str) email_address: The email address to be parsed.
+    param (str) email_address: The email address to be parsed.
 
 Returns:
     string: The provider from the email address.
