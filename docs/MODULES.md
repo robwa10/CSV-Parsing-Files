@@ -10,8 +10,9 @@ __MODULES.md__ contains documentation for all modules.
 * [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
 
 [Parsing](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parsing)  
+* [email_provider](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#email_provideremail_address)
 * [parse_csv](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parse_csva_file-sn-d)  
-* [pull](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#pulla_list-n)
+* [pull](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#pulla_list-n)  
 
 [Validation](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validation)  
 * [validate_choice](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validate_choicechoices)
@@ -34,6 +35,7 @@ __MODULES.md__ contains documentation for all modules.
 >>>print(compound_interest(10, 3, 5))
 11.592740743000002
 ```
+___
 
 ### `items(a_list, n=1000)`  
 Counts the instances of each item in a list using `Counter`.  
@@ -42,7 +44,6 @@ Counts the instances of each item in a list using `Counter`.
 - a_list *(list)*: The list to count.  
 - dict=False [optional] *(boolean)*: Boolean to return list (default) or dictionary. Must be passed if an integer is passed as third param.  
 - n=1000 [optional] *(int)*: Integer to limit data returned. Default is 1000.  
-
 
 #### Returns  
 - *(List)* [default]: Returns a list. Each item in the list is `[occurrence total: 'value']`.
@@ -63,7 +64,23 @@ print(dict_limit_results)
 // {5: 'a', 4: 'd', 3: 'f'}
 ```
 
-## Parsing
+## Parsing  
+
+### `email_provider(email_address)`  
+
+#### Arguments  
+- param1 (str) email_address: The email address to be parsed.
+
+#### Returns  
+- string: The provider from the email address.  
+
+#### Example  
+```
+>>> print(email_provider('john.smith@gmail.com'))  
+gmail.com
+```
+
+___
 
 ### `parse_csv(a_file, s='\n', d=',')`  
 Creates a list from data within each row of a CSV file and appends that list to a list.

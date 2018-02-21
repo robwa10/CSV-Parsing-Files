@@ -16,7 +16,17 @@ Licensed under the MIT License
 from collections import Counter
 
 
-# Counting---------------------------------------------------------------------
+# Maths------------------------------------------------------------------------
+def compound_interest(investment, rate, time):
+    counter = 0
+    total = investment
+    interest = 1 + (rate * 0.01)
+    while counter < time:
+        total = total * interest
+        counter += 1
+    return total
+
+
 def items(a_list, *args):
     return_dict = False
     results = 1000
@@ -43,6 +53,12 @@ def items(a_list, *args):
 
 
 # Parsing----------------------------------------------------------------------
+def email_provider(email_address):
+    start_point = email_address.find('@') + 1
+    provider = email_address[start_point:]
+    return provider
+
+
 def parse_csv(a_file, s='\n', d=','):
     parsed = []
     f = open(a_file, 'r').read()
