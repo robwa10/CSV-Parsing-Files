@@ -5,7 +5,8 @@ __MODULES.md__ contains documentation for all modules.
 [EXAMPLE-FILES.md](/docs/EXAMPLE-FILES.md) contains documentation for files demonstrating module functionality.
 
 ## Table of Contents  
-[Counting](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#counting)  
+[Maths](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#maths)  
+* [compound_interest](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#compound_interest-investment-rate-time)
 * [items](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#itemsa_list-n1000)
 
 [Parsing](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#parsing)  
@@ -16,7 +17,23 @@ __MODULES.md__ contains documentation for all modules.
 * [validate_choice](https://github.com/robwa10/Parse-and-Analyze/blob/master/docs/MODULES.md#validate_choicechoices)
 
 
-## Counting  
+## Maths  
+
+### `compound_interest(investment, rate, time)`  
+
+#### Arguments
+- param1 *(int)* investment: The amount of original investment.
+- param2 *(int)* rate: Interest rate in whole number. i.e. 2% = 2.
+- param3 *(int)* time: Length of investment. Used to exponentially raise total. Assumes interest is applied for every whole integer in param.  
+
+#### Returns  
+- Integer: Does not round or format the returned value.  
+
+#### Example  
+```
+>>>print(compound_interest(10, 3, 5))
+11.592740743000002
+```
 
 ### `items(a_list, n=1000)`  
 Counts the instances of each item in a list using `Counter`.  
