@@ -5,7 +5,7 @@ Since:
     1.0.0
 
 Category:
-    Parsing
+    Maths
 
 Args:
     param1 (list) a_list: The list to count.
