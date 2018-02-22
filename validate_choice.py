@@ -16,15 +16,15 @@ Returns:
     string: Returns validated input as a lowercase string.
 
 Example:
->>> my_choices = ['Bob', 'Susie', '3', '4']
->>> print(validate_choice(my_choices))
-Please choose one.
-Bob
-Susie
-3
-4
->>> Bob
-bob
+    >>> my_choices = ['Bob', 'Susie', '3', '4']
+    >>> print(validate_choice(my_choices))
+    Please choose one.
+    Bob
+    Susie
+    3
+    4
+    >>> Bob
+    bob
 """
 
 
